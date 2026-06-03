@@ -22,7 +22,7 @@ export function FanPersonaCard({ result }: FanPersonaCardProps) {
   return (
     <section className="overflow-hidden rounded-lg border border-slate-200 bg-white text-slate-950 shadow-xl shadow-slate-200/70">
       <div className="grid gap-0 lg:grid-cols-[0.95fr_1.05fr]">
-        <div className="min-h-[260px] bg-slate-50 p-5 sm:p-6">
+        <div className="flex min-h-[280px] items-center bg-slate-50 p-4 sm:p-6">
           <PersonaIllustration alt={persona.image.alt} code={persona.code} />
         </div>
         <div className="p-6 sm:p-8">

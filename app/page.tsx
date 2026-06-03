@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HomeHeroIllustration } from "../components/fan-test/HomeHeroIllustration";
 
 export default function HomePage() {
   return (
@@ -42,11 +43,18 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-xl shadow-slate-200/70">
-            <h3 className="text-lg font-semibold text-slate-950">本测试纯属娱乐。</h3>
-            <p className="mt-4 text-sm leading-7 text-slate-600">
-              如有冒犯，说明测得挺准。结果只调侃日常行为、社交状态、看球姿势和球迷心态，不攻击国家、民族、地域或现实身份。
-            </p>
+          <div className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-xl shadow-slate-200/70">
+            <div className="p-4">
+              <HomeHeroIllustration />
+            </div>
+            <div className="border-t border-slate-100 p-6">
+              <h3 className="text-lg font-semibold text-slate-950">
+                本测试纯属娱乐。
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-slate-600">
+                如有冒犯，说明测得挺准。结果只调侃日常行为、社交状态、看球姿势和球迷心态，不攻击国家、民族、地域或现实身份。
+              </p>
+            </div>
           </div>
         </section>
       </div>
