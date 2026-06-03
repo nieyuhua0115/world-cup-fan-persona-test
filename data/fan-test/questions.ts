@@ -2,268 +2,294 @@ import type { FanQuestion } from "./types";
 
 export const fanQuestions: FanQuestion[] = [
   {
-    id: "group_chat_matchday",
-    text: "群聊突然 99+，像赛后评分区炸了，你第一反应是？",
-    subtitle: "这题测你是冲进评论区，还是先看完整回放。",
+    id: "late_arrival",
+    text: "聚会迟到了，你会怎么进场？",
+    subtitle: "迟到不可怕，可怕的是你还想踢出赛后名场面。",
     options: [
       {
-        id: "rush_to_comments",
-        label: "立刻进场，先看谁被开会、谁在逆风输出",
-        scoreEffects: { H: 5, E: 5, W: 3 },
+        id: "leao_smile",
+        label: "“球未到，人先笑”，先笑着挥手，气氛到位就算进球",
+        scoreEffects: { H: 3, S: 5, E: 4, W: 2 },
       },
       {
-        id: "read_full_thread",
-        label: "先爬楼，从首发阵容看到补时冲突",
-        scoreEffects: { C: 5, T: 4, I: 2 },
+        id: "lingard_show",
+        label: "“你的林皇，无限猖狂”，一进门直接开始整活",
+        scoreEffects: { H: 5, S: 4, E: 6, W: 4 },
       },
       {
-        id: "find_hot_comment",
-        label: "找热评和名场面，看看有没有懂球帝味儿",
-        scoreEffects: { S: 5, W: 4, E: 2 },
+        id: "press_conference",
+        label: "发布会逆转：解释得像自己根本没迟到",
+        scoreEffects: { C: 3, T: 5, E: 4 },
       },
       {
-        id: "silent_scout",
-        label: "继续潜水，但默默把所有战犯名单记下",
-        scoreEffects: { I: 6, C: 3, L: 2 },
+        id: "rnm_refund",
+        label: "RNM 退钱：怪导航、怪天气、怪本泽马",
+        scoreEffects: { H: 6, E: 4, L: 2 },
       },
     ],
   },
   {
-    id: "friend_late",
-    text: "朋友迟到 40 分钟，你最像哪种赛后反应？",
+    id: "bad_project_start",
+    text: "你负责一个项目，开局就烂了，你第一反应是？",
     options: [
       {
-        id: "stoppage_rage",
-        label: "直接补时心梗：这都能迟到？裁判你看看表！",
-        scoreEffects: { H: 6, E: 4 },
+        id: "chelsea_north",
+        label: "蓝军北伐：现在第 11 名而已，伟大征程刚开始",
+        scoreEffects: { H: 3, S: 3, W: 6 },
       },
       {
-        id: "check_xg",
-        label: "先问交通、路线和出门时间，分析迟到 xG",
-        scoreEffects: { C: 6, T: 5 },
+        id: "ten_hag_positive",
+        label: "发布会逆转：数据不重要，过程是积极的",
+        scoreEffects: { T: 5, E: 5, H: 3 },
       },
       {
-        id: "dramatic_wait",
-        label: "把等待脑补成绝杀前摇：主角总是最后登场",
-        scoreEffects: { S: 5, I: 2, H: 2 },
+        id: "arsenal_93",
+        label: "93% 冠军：我已经提前看到最后崩盘了",
+        scoreEffects: { I: 5, L: 5, S: 3 },
       },
       {
-        id: "switch_plan",
-        label: "算了，我先转会去奶茶店，快乐不能等",
-        scoreEffects: { W: 6, C: 2 },
+        id: "benzema_fault",
+        label: "都赖本泽马：先找一个万能背锅位续命",
+        scoreEffects: { H: 4, W: 5, E: 3 },
       },
     ],
   },
   {
-    id: "plan_changed",
-    text: "原定计划突然被改，你会怎么处理这次“临场换人”？",
+    id: "message_not_replied",
+    text: "你喜欢的人没回消息，你会？",
     options: [
       {
-        id: "coach_yelling",
-        label: "当场开麦：这个换人我看不懂，主帅下课",
-        scoreEffects: { H: 6, E: 5, T: 2 },
+        id: "rashford_memory",
+        label: "19 岁的拉什福德：开始回忆过去那些高光瞬间",
+        scoreEffects: { S: 5, I: 4, L: 5 },
       },
       {
-        id: "new_shape",
-        label: "迅速重排路线、预算和时间，改踢三中卫",
-        scoreEffects: { C: 5, T: 6 },
+        id: "haaland_humble",
+        label: "哈兰德 Stay humble：保持冷静，保持谦逊，保持不秒回",
+        scoreEffects: { C: 6, T: 4, I: 2 },
       },
       {
-        id: "new_storyline",
-        label: "觉得剧情突然有意思了，伟大的转会来了",
-        scoreEffects: { S: 4, W: 5 },
+        id: "lingard_meme",
+        label: "林皇模式：发个抽象表情包，灵魂无限猖狂",
+        scoreEffects: { H: 4, E: 6, W: 5 },
       },
       {
-        id: "old_plan_loyal",
-        label: "嘴上配合，心里还在怀念原计划的黄金时代",
-        scoreEffects: { I: 4, L: 5, S: 2 },
+        id: "leao_already_smiling",
+        label: "莱奥模式：人家还没回，你已经脑补到笑了",
+        scoreEffects: { S: 6, H: 3, W: 2 },
       },
     ],
   },
   {
-    id: "someone_questions_you",
-    text: "别人问你“你懂这个吗？”，你会触发哪种球盲过滤器？",
+    id: "empty_goal_miss",
+    text: "打游戏/踢球/做事空门没进，你会？",
     options: [
       {
-        id: "three_min_press",
-        label: "立刻高位逼抢，三分钟输出到对方想换边",
-        scoreEffects: { H: 4, E: 6, T: 3 },
+        id: "sterling_happy",
+        label: "快乐足球：没事，快乐第一，进球第二",
+        scoreEffects: { H: 4, S: 4, E: 3, W: 5 },
       },
       {
-        id: "show_receipts",
-        label: "不急，先摆数据、案例、时间线和裁判报告",
-        scoreEffects: { C: 6, T: 6 },
+        id: "werner_scout",
+        label: "金色侦察机：跑位到了，射门玄学另说",
+        scoreEffects: { T: 5, C: 3, W: 3 },
       },
       {
-        id: "vibes_expert",
-        label: "我不一定懂战术，但我懂谁有主角相",
-        scoreEffects: { S: 6, W: 2 },
+        id: "antony_spin",
+        label: "圆神启动：先转两圈，姿势必须先进集锦",
+        scoreEffects: { S: 6, H: 3, E: 3 },
       },
       {
-        id: "quietly_knows",
-        label: "不说话，心里已经把 TA 开除懂球籍",
-        scoreEffects: { I: 6, C: 3, L: 2 },
+        id: "maguire_return",
+        label: "马奎尔反转：被笑完之后默默等下次打回来",
+        scoreEffects: { C: 3, T: 3, I: 4, L: 6 },
       },
     ],
   },
   {
-    id: "posting_after_event",
-    text: "一件事刚结束，你的朋友圈像哪种赛后内容？",
+    id: "bad_state",
+    text: "朋友问你为什么最近状态不好，你会？",
     options: [
       {
-        id: "instant_reaction",
-        label: "哨响立刻发：我宣布这就是年度名场面",
-        scoreEffects: { H: 5, E: 6, W: 2 },
+        id: "two_year_two_titles",
+        label: "两年两冠：我有历史成绩，不接受清算",
+        scoreEffects: { H: 4, T: 4, E: 5, L: 2 },
       },
       {
-        id: "long_analysis",
-        label: "等十分钟，写一篇赛后复盘小作文",
-        scoreEffects: { C: 4, T: 5, I: 2 },
+        id: "mourinho_third_year",
+        label: "穆三年：周期到了，爆炸正常",
+        scoreEffects: { C: 3, T: 5, I: 3, L: 4 },
       },
       {
-        id: "slow_motion",
-        label: "配图、BGM、滤镜都要像慢镜头回放",
-        scoreEffects: { S: 6, E: 2 },
+        id: "alonso_well",
+        label: "龙哥许愿池：没事，我准备去接好运",
+        scoreEffects: { C: 4, S: 5, W: 4 },
       },
       {
-        id: "archive_only",
-        label: "不发，默默收藏，等多年后当青春素材",
-        scoreEffects: { I: 6, L: 4 },
+        id: "chelsea_life",
+        label: "车迷的命也是命：别问，问就是 PTSD",
+        scoreEffects: { H: 3, I: 5, L: 5 },
       },
     ],
   },
   {
-    id: "shopping_window",
-    text: "买东西时，你更像哪类转会窗操作？",
+    id: "social_status",
+    text: "你最像哪种社交状态？",
     options: [
       {
-        id: "highlight_scout",
-        label: "看集锦上头：它太有主角气质了，拿下",
-        scoreEffects: { S: 6, H: 3 },
+        id: "lingard_center",
+        label: "林皇：到哪都是评论区中心，抽象但有流量",
+        scoreEffects: { H: 5, S: 4, E: 7, W: 4 },
       },
       {
-        id: "data_department",
-        label: "参数、口碑、价格全拉表，拒绝溢价引援",
-        scoreEffects: { C: 5, T: 6 },
+        id: "leao_relaxed",
+        label: "莱奥：一出现氛围就松了，失误也不内耗",
+        scoreEffects: { C: 3, S: 5, E: 3, W: 3 },
       },
       {
-        id: "deadline_deal",
-        label: "临门一脚冲动下单，转会截止日的神",
-        scoreEffects: { H: 4, W: 6 },
+        id: "haaland_pressure",
+        label: "哈兰德：话不多，但压迫感很强",
+        scoreEffects: { C: 5, T: 5, I: 3 },
       },
       {
-        id: "renew_contract",
-        label: "老牌子续约，虽然有短板但有感情基础",
-        scoreEffects: { L: 6, C: 2, I: 2 },
+        id: "palmer_slapback",
+        label: "帕尔默：一开始被低估，后面直接打脸全网",
+        scoreEffects: { S: 4, T: 3, W: 6 },
       },
     ],
   },
   {
-    id: "favorite_life_script",
-    text: "你最吃哪种人生剧本？",
+    id: "decision_style",
+    text: "你做选择时更像？",
     options: [
       {
-        id: "last_dance_life",
-        label: "最后一舞：老朋友、旧梦想、终于等到你",
-        scoreEffects: { S: 5, L: 6, H: 2 },
+        id: "antony_ritual",
+        label: "安东尼：先转一圈，仪式感必须有",
+        scoreEffects: { H: 3, S: 6, E: 2 },
       },
       {
-        id: "dark_horse_life",
-        label: "黑马逆袭：谁都不看好，偏偏一路爆冷",
-        scoreEffects: { W: 7, H: 4 },
+        id: "sterling_choice",
+        label: "斯特林：选择不一定对，但一定快乐",
+        scoreEffects: { H: 4, W: 6, E: 3 },
       },
       {
-        id: "chosen_one_life",
-        label: "天选主角：一登场就像自带金球奖滤镜",
-        scoreEffects: { S: 7, W: 2 },
+        id: "benzema_burden",
+        label: "本泽马：出问题我先背着，反正都赖我",
+        scoreEffects: { C: 3, T: 3, L: 6, I: 2 },
       },
       {
-        id: "system_win_life",
-        label: "体系碾压：计划清楚、执行稳定、赢得体面",
-        scoreEffects: { T: 7, C: 4 },
+        id: "ten_hag_spin",
+        label: "滕帅：无论结果如何，赛后我能圆回来",
+        scoreEffects: { T: 6, E: 5, H: 2 },
       },
     ],
   },
   {
-    id: "pressure_high_press",
+    id: "annoying_teammate",
+    text: "你最讨厌团队里哪种人？",
+    options: [
+      {
+        id: "no_dribble_no_pass",
+        label: "要突没突，要传没传，还觉得自己是核心",
+        scoreEffects: { H: 5, T: 4, E: 3 },
+      },
+      {
+        id: "conference_goat",
+        label: "活没干完，但发布会逆转能力封神",
+        scoreEffects: { T: 5, C: 4, H: 2 },
+      },
+      {
+        id: "bottle_93",
+        label: "93% 冠军：快赢了开始松，最后全队心碎",
+        scoreEffects: { H: 4, L: 5, I: 2 },
+      },
+      {
+        id: "nine_princes",
+        label: "九子夺嫡：人人都是太子，没人干脏活",
+        scoreEffects: { C: 4, T: 5, W: 2 },
+      },
+    ],
+  },
+  {
+    id: "low_point",
+    text: "遇到低谷，你会？",
+    options: [
+      {
+        id: "north_campaign",
+        label: "蓝军北伐：从倒数开始往上打，先喊口号再说",
+        scoreEffects: { H: 5, E: 4, W: 5 },
+      },
+      {
+        id: "maguire_endure",
+        label: "马奎尔：笑梗不笑人，我迟早证明自己",
+        scoreEffects: { C: 4, T: 3, L: 6 },
+      },
+      {
+        id: "rashford_flashback",
+        label: "拉什福德：陷入青春回忆杀，想起自己也曾未来可期",
+        scoreEffects: { S: 5, I: 5, L: 4 },
+      },
+      {
+        id: "lingard_deify",
+        label: "林皇：低谷？那正是封神的开始",
+        scoreEffects: { H: 5, S: 5, E: 4, W: 4 },
+      },
+    ],
+  },
+  {
+    id: "social_media_persona",
+    text: "你的朋友圈/小红书人格更像？",
+    options: [
+      {
+        id: "leao_feed",
+        label: "莱奥型：运动、笑容、松弛感，球未进人先笑",
+        scoreEffects: { S: 6, E: 3, W: 3 },
+      },
+      {
+        id: "lingard_feed",
+        label: "林皇型：抽象、整活、流量体质，无限猖狂",
+        scoreEffects: { H: 5, E: 6, W: 5 },
+      },
+      {
+        id: "haaland_feed",
+        label: "哈兰德型：少说话，直接上强度，保持谦逊",
+        scoreEffects: { C: 5, T: 5, I: 3 },
+      },
+      {
+        id: "arsenal_feed",
+        label: "阿森纳型：自黑、自洽、永远相信下一场",
+        scoreEffects: { S: 3, L: 6, I: 2 },
+      },
+    ],
+  },
+  {
+    id: "incoming_pressure",
     text: "压力突然高位逼抢，你会怎么出球？",
     options: [
       {
-        id: "carry_through",
-        label: "硬带过去，边破防边推进",
-        scoreEffects: { H: 6, L: 3 },
+        id: "rnm_breakdown",
+        label: "RNM 退钱：先破防，先骂一句，血压先越位",
+        scoreEffects: { H: 7, E: 5 },
       },
       {
-        id: "calm_build_up",
-        label: "先控一下，拆任务，别被节奏带乱",
-        scoreEffects: { C: 6, T: 5 },
+        id: "rodri_control",
+        label: "先控节奏，拆任务，像后腰一样把局面稳住",
+        scoreEffects: { C: 6, T: 6 },
       },
       {
-        id: "call_teammate",
-        label: "立刻找队友连线，不说出来会炸",
-        scoreEffects: { E: 6, H: 3 },
+        id: "hero_ball",
+        label: "相信个人能力，准备来一脚人生世界波",
+        scoreEffects: { H: 4, S: 6, W: 2 },
       },
       {
-        id: "park_bus",
+        id: "park_the_bus",
         label: "先摆大巴，消失一会儿，活下来再说",
-        scoreEffects: { I: 6, C: 3 },
+        scoreEffects: { I: 6, C: 3, L: 2 },
       },
     ],
   },
   {
-    id: "protect_favorite",
-    text: "你喜欢的东西被群嘲，你会？",
-    options: [
-      {
-        id: "defend_badge",
-        label: "直接护队徽：可以输，不能被这么说",
-        scoreEffects: { H: 6, E: 4, L: 4 },
-      },
-      {
-        id: "explain_context",
-        label: "解释背景：你们只看比分，不看过程",
-        scoreEffects: { T: 5, C: 4, L: 2 },
-      },
-      {
-        id: "main_character_defense",
-        label: "替主角说话：你们不懂 TA 的宿命感",
-        scoreEffects: { S: 6, H: 2, L: 2 },
-      },
-      {
-        id: "find_new_fun",
-        label: "算了，先去隔壁看新乐子，别影响心情",
-        scoreEffects: { W: 7, C: 2 },
-      },
-    ],
-  },
-  {
-    id: "watching_live",
-    text: "一起看直播/综艺/比赛时，你是哪种解说席？",
-    options: [
-      {
-        id: "human_barrage",
-        label: "人形弹幕，5 秒一句：这都不吹？",
-        scoreEffects: { E: 7, H: 4 },
-      },
-      {
-        id: "tactical_camera",
-        label: "战术镜头，专看谁站位不对、谁在摸鱼",
-        scoreEffects: { T: 6, C: 4 },
-      },
-      {
-        id: "star_camera",
-        label: "主角镜头，谁有高光谁就是今天封面",
-        scoreEffects: { S: 6, W: 3 },
-      },
-      {
-        id: "inner_commentary",
-        label: "表面安静，内心已经刷满弹幕",
-        scoreEffects: { I: 7, S: 2 },
-      },
-    ],
-  },
-  {
-    id: "old_favorite_decline",
+    id: "favorite_declines",
     text: "你喜欢很久的东西开始走下坡路，你像哪类球迷？",
     options: [
       {
@@ -274,7 +300,7 @@ export const fanQuestions: FanQuestion[] = [
       {
         id: "post_match_board",
         label: "冷静开会：问题在管理层、阵容和执行",
-        scoreEffects: { T: 6, C: 4 },
+        scoreEffects: { T: 7, C: 4 },
       },
       {
         id: "transfer_out",
@@ -285,32 +311,6 @@ export const fanQuestions: FanQuestion[] = [
         id: "quiet_grief",
         label: "不骂了，只是像老队长退场一样难过",
         scoreEffects: { I: 6, L: 5, S: 2 },
-      },
-    ],
-  },
-  {
-    id: "party_role",
-    text: "朋友聚会里，你最像哪种球队角色？",
-    options: [
-      {
-        id: "captain_hype",
-        label: "更衣室队长，负责把气氛喊起来",
-        scoreEffects: { E: 7, H: 3, L: 2 },
-      },
-      {
-        id: "midfield_organizer",
-        label: "中场调度，时间地点流程都得顺",
-        scoreEffects: { T: 6, C: 4 },
-      },
-      {
-        id: "highlight_editor",
-        label: "赛后剪辑师，专门记住好笑名场面",
-        scoreEffects: { S: 4, W: 5 },
-      },
-      {
-        id: "bench_observer",
-        label: "替补席观察员，不多说但全都看见了",
-        scoreEffects: { I: 6, C: 3 },
       },
     ],
   },
@@ -341,13 +341,13 @@ export const fanQuestions: FanQuestion[] = [
     ],
   },
   {
-    id: "friend_asks_advice",
+    id: "advice_manager",
     text: "朋友找你咨询感情/工作/人生，你会怎么当无证主帅？",
     options: [
       {
-        id: "protective_manager",
+        id: "red_card_friend",
         label: "先护短：谁让你难受，我先给 TA 红牌",
-        scoreEffects: { H: 5, L: 5, E: 2 },
+        scoreEffects: { H: 5, L: 5, E: 3 },
       },
       {
         id: "tactics_session",
@@ -360,14 +360,14 @@ export const fanQuestions: FanQuestion[] = [
         scoreEffects: { S: 5, W: 4 },
       },
       {
-        id: "quiet_assistant",
+        id: "assistant_coach",
         label: "认真听完，最后像助教一样给一句准的",
         scoreEffects: { I: 5, C: 3, L: 2 },
       },
     ],
   },
   {
-    id: "work_before_off",
+    id: "new_task_before_off",
     text: "快下班/睡觉前突然来新任务，你是什么补时状态？",
     options: [
       {
@@ -393,17 +393,43 @@ export const fanQuestions: FanQuestion[] = [
     ],
   },
   {
+    id: "team_low_errors",
+    text: "团队连续犯低级错误，你最像哪句破防名言？",
+    options: [
+      {
+        id: "face_gone",
+        label: "脸都不要了：这还能继续踢？",
+        scoreEffects: { H: 6, E: 5, L: 2 },
+      },
+      {
+        id: "structural_issue",
+        label: "不是某个人的问题，是整个体系出球有问题",
+        scoreEffects: { C: 5, T: 7 },
+      },
+      {
+        id: "worst_script",
+        label: "输完泰国输越南：我已经开始脑补最坏剧本",
+        scoreEffects: { H: 3, S: 4, I: 5 },
+      },
+      {
+        id: "wait_savior",
+        label: "先别死，说不定人民的球王会来救一下",
+        scoreEffects: { W: 5, C: 3, S: 2 },
+      },
+    ],
+  },
+  {
     id: "being_roasted",
     text: "别人调侃你“你这也太戏多了”，你会？",
     options: [
       {
-        id: "press_conference",
-        label: "开新闻发布会：我这是激情，不是戏多",
+        id: "press_conference_defense",
+        label: "开发布会：我这是激情，不是戏多",
         scoreEffects: { H: 5, E: 5, S: 2 },
       },
       {
-        id: "analysis_defense",
-        label: "展示回放：我每一步推理都有依据",
+        id: "var_evidence",
+        label: "展示 VAR 回放：我每一步推理都有依据",
         scoreEffects: { T: 6, C: 4 },
       },
       {
@@ -412,7 +438,7 @@ export const fanQuestions: FanQuestion[] = [
         scoreEffects: { S: 6, W: 4 },
       },
       {
-        id: "silent_grudge",
+        id: "post_match_rating",
         label: "不解释，默默记入赛后评分",
         scoreEffects: { I: 6, L: 3, C: 2 },
       },
