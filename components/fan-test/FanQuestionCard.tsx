@@ -12,15 +12,15 @@ export function FanQuestionCard({
   onSelect,
 }: FanQuestionCardProps) {
   return (
-    <div className="rounded-lg border border-white/10 bg-white/[0.05] p-5 shadow-2xl shadow-black/20 sm:p-7">
-      <p className="text-sm font-semibold uppercase tracking-[0.16em] text-lime-300">
-        Football SBTI
+    <div className="rounded-lg border border-slate-200 bg-white p-5 shadow-xl shadow-slate-200/70 sm:p-7">
+      <p className="text-sm font-semibold uppercase tracking-[0.16em] text-rose-500">
+        Life SBTI
       </p>
-      <h2 className="mt-3 text-2xl font-semibold leading-snug text-white">
+      <h2 className="mt-3 text-2xl font-semibold leading-snug text-slate-950">
         {question.text}
       </h2>
       {question.subtitle ? (
-        <p className="mt-2 text-sm leading-6 text-slate-400">{question.subtitle}</p>
+        <p className="mt-2 text-sm leading-6 text-slate-500">{question.subtitle}</p>
       ) : null}
 
       <div className="mt-6 grid gap-3">
@@ -32,8 +32,8 @@ export function FanQuestionCard({
               key={option.id}
               className={`rounded-md border px-4 py-4 text-left transition ${
                 isSelected
-                  ? "border-lime-300 bg-lime-300 text-slate-950"
-                  : "border-white/10 bg-slate-950/70 text-slate-200 hover:border-lime-300/70"
+                  ? "border-rose-500 bg-rose-50 text-rose-950"
+                  : "border-slate-200 bg-white text-slate-700 hover:border-rose-300 hover:bg-rose-50/60"
               }`}
               type="button"
               onClick={() => onSelect(option.id)}

@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "世界杯犯病人格测试",
-  description: "World Cup Fan Persona Test / Football SBTI 毒舌版",
+  description: "World Cup Life Persona Test / SBTI 毒舌版",
 };
 
 export default function RootLayout({

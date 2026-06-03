@@ -68,8 +68,8 @@ export function calculateFanPersona({
         ...toPercentPair(scores.H, scores.C),
       },
       aesthetic: {
-        leftLabel: "巨星",
-        rightLabel: "体系",
+        leftLabel: "主角",
+        rightLabel: "秩序",
         leftCode: "S",
         rightCode: "T",
         ...toPercentPair(scores.S, scores.T),
@@ -82,7 +82,7 @@ export function calculateFanPersona({
         ...toPercentPair(scores.E, scores.I),
       },
       loyalty: {
-        leftLabel: "忠诚",
+        leftLabel: "长情",
         rightLabel: "爽感",
         leftCode: "L",
         rightCode: "W",
@@ -179,12 +179,12 @@ function buildShareLine(
     : "我很冷静，但不代表我不会在心里开会。");
 
   lines.push(code[2] === "E"
-    ? "我看球不发言是不可能的。"
-    : "我表面没事，内心已经踢完加时。");
+    ? "我看热闹不发言是不可能的。"
+    : "我表面没事，内心已经演完三集。");
 
   lines.push(code[3] === "L"
-    ? "我不是不想换主队，是青春不允许。"
-    : "我的主队随赛程实时更新。");
+    ? "我不是不想换，是旧情分不允许。"
+    : "我的精神归属随快乐浓度实时更新。");
 
   return `我是【${personaTitle}】+【${nationalTeamRoastTitle}】。${lines.join("")}`;
 }

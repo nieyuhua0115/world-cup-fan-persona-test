@@ -39,6 +39,10 @@ export type FanPersona = {
   code: FanPersonaCode;
   title: string;
   subtitle: string;
+  image: {
+    src: string;
+    alt: string;
+  };
   keywords: string[];
   description: string;
   footballQuote: string;
@@ -85,8 +89,8 @@ export type FanTestResult = {
       rightCode: "C";
     };
     aesthetic: FanAxisBreakdownPair & {
-      leftLabel: "巨星";
-      rightLabel: "体系";
+      leftLabel: "主角";
+      rightLabel: "秩序";
       leftCode: "S";
       rightCode: "T";
     };
@@ -97,7 +101,7 @@ export type FanTestResult = {
       rightCode: "I";
     };
     loyalty: FanAxisBreakdownPair & {
-      leftLabel: "忠诚";
+      leftLabel: "长情";
       rightLabel: "爽感";
       leftCode: "L";
       rightCode: "W";

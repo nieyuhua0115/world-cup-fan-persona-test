@@ -58,17 +58,17 @@ export default function FanResultPage() {
 
   if (!result) {
     return (
-      <main className="min-h-screen bg-slate-950 px-5 py-6 text-white sm:px-8">
+      <main className="min-h-screen bg-[#f7f4ee] px-5 py-6 text-slate-950 sm:px-8">
         <div className="mx-auto flex min-h-[calc(100vh-3rem)] max-w-3xl flex-col items-center justify-center text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-lime-300">
-            Football SBTI
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-rose-500">
+            Life SBTI
           </p>
           <h1 className="mt-4 text-4xl font-semibold">还没有测试结果</h1>
-          <p className="mt-4 text-sm leading-7 text-slate-300">
+          <p className="mt-4 text-sm leading-7 text-slate-600">
             localStorage 里没有找到已完成的世界杯犯病人格测试。先做完 16 道题，再回来截图发疯。
           </p>
           <Link
-            className="mt-8 rounded-md bg-lime-300 px-5 py-3 text-sm font-bold text-slate-950 transition hover:bg-lime-200"
+            className="mt-8 rounded-md bg-slate-950 px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-800"
             href="/fan-test"
           >
             去测试
@@ -79,18 +79,18 @@ export default function FanResultPage() {
   }
 
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
+    <main className="min-h-screen bg-[#f7f4ee] text-slate-950">
       <div className="mx-auto w-full max-w-6xl px-5 py-6 sm:px-8">
-        <header className="flex items-center justify-between border-b border-white/10 pb-5">
+        <header className="flex items-center justify-between border-b border-slate-200 pb-5">
           <Link href="/" className="group">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-lime-300">
-              Football SBTI
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rose-500">
+              Life SBTI
             </p>
-            <h1 className="mt-2 text-2xl font-semibold group-hover:text-lime-200">
+            <h1 className="mt-2 text-2xl font-semibold group-hover:text-rose-600">
               世界杯犯病人格测试
             </h1>
           </Link>
-          <div className="rounded-md border border-white/15 px-3 py-2 text-sm text-slate-300">
+          <div className="rounded-md border border-slate-200 bg-white px-3 py-2 text-sm text-slate-500">
             {result.code}
           </div>
         </header>
@@ -129,33 +129,33 @@ function CopyPanel({
   onCopy: () => void;
 }) {
   return (
-    <section className="rounded-lg border border-white/10 bg-white/[0.05] p-5">
-      <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-lime-300">
+    <section className="rounded-lg border border-slate-200 bg-white p-5 shadow-xl shadow-slate-200/70">
+      <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-rose-500">
         朋友圈文案
       </h2>
-      <p className="mt-4 rounded-md bg-slate-950/70 p-4 text-sm leading-7 text-slate-200">
+      <p className="mt-4 rounded-md bg-slate-50 p-4 text-sm leading-7 text-slate-700">
         {friendCircleCopy}
       </p>
 
-      <h2 className="mt-6 text-sm font-semibold uppercase tracking-[0.16em] text-lime-300">
+      <h2 className="mt-6 text-sm font-semibold uppercase tracking-[0.16em] text-rose-500">
         毒舌总结
       </h2>
-      <p className="mt-4 rounded-md bg-slate-950/70 p-4 text-sm leading-7 text-slate-200">
+      <p className="mt-4 rounded-md bg-slate-50 p-4 text-sm leading-7 text-slate-700">
         {shareLine}
       </p>
 
       <button
-        className="mt-5 rounded-md bg-lime-300 px-5 py-3 text-sm font-bold text-slate-950 transition hover:bg-lime-200"
+        className="mt-5 rounded-md bg-slate-950 px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-800"
         type="button"
         onClick={onCopy}
       >
         复制朋友圈文案
       </button>
       {copyState === "copied" ? (
-        <p className="mt-3 text-sm text-lime-200">已复制。</p>
+        <p className="mt-3 text-sm text-emerald-600">已复制。</p>
       ) : null}
       {copyState === "unsupported" ? (
-        <p className="mt-3 text-sm text-slate-300">
+        <p className="mt-3 text-sm text-slate-500">
           当前浏览器不支持自动复制，直接选中文案复制即可。
         </p>
       ) : null}
@@ -165,16 +165,16 @@ function CopyPanel({
 
 function ActionPanel() {
   return (
-    <section className="rounded-lg border border-white/10 bg-white/[0.05] p-5">
+    <section className="rounded-lg border border-slate-200 bg-white p-5 shadow-xl shadow-slate-200/70">
       <div className="flex flex-wrap gap-3">
         <Link
-          className="rounded-md bg-lime-300 px-5 py-3 text-sm font-bold text-slate-950 transition hover:bg-lime-200"
+          className="rounded-md bg-slate-950 px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-800"
           href="/fan-test"
         >
           重新测试
         </Link>
         <Link
-          className="rounded-md border border-white/15 px-5 py-3 text-sm font-semibold text-slate-300 transition hover:border-white/30"
+          className="rounded-md border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-600 transition hover:border-slate-300"
           href="/"
         >
           返回首页
