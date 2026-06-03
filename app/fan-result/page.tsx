@@ -61,7 +61,7 @@ export default function FanResultPage() {
       <main className="min-h-screen bg-[#f7f4ee] px-5 py-6 text-slate-950 sm:px-8">
         <div className="mx-auto flex min-h-[calc(100vh-3rem)] max-w-3xl flex-col items-center justify-center text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-rose-500">
-            Life SBTI
+            Football Meme SBTI
           </p>
           <h1 className="mt-4 text-4xl font-semibold">还没有测试结果</h1>
           <p className="mt-4 text-sm leading-7 text-slate-600">
@@ -84,7 +84,7 @@ export default function FanResultPage() {
         <header className="flex items-center justify-between border-b border-slate-200 pb-5">
           <Link href="/" className="group">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rose-500">
-              Life SBTI
+              Football Meme SBTI
             </p>
             <h1 className="mt-2 text-2xl font-semibold group-hover:text-rose-600">
               世界杯犯病人格测试

@@ -2,419 +2,419 @@ import type { FanQuestion } from "./types";
 
 export const fanQuestions: FanQuestion[] = [
   {
-    id: "group_chat_ping",
-    text: "群聊突然 99+，你第一反应是？",
-    subtitle: "不是世界杯也一样，你的人格会先动。",
+    id: "group_chat_matchday",
+    text: "群聊突然 99+，像赛后评分区炸了，你第一反应是？",
+    subtitle: "这题测你是冲进评论区，还是先看完整回放。",
     options: [
       {
-        id: "rush_in",
-        label: "立刻点进去，先看谁又破防了",
+        id: "rush_to_comments",
+        label: "立刻进场，先看谁被开会、谁在逆风输出",
         scoreEffects: { H: 5, E: 5, W: 3 },
       },
       {
-        id: "observe_context",
-        label: "先爬楼，搞清楚事情起因经过结果",
+        id: "read_full_thread",
+        label: "先爬楼，从首发阵容看到补时冲突",
         scoreEffects: { C: 5, T: 4, I: 2 },
       },
       {
-        id: "find_main_character",
-        label: "看有没有名场面、主角发言和截图素材",
-        scoreEffects: { S: 6, W: 4 },
+        id: "find_hot_comment",
+        label: "找热评和名场面，看看有没有懂球帝味儿",
+        scoreEffects: { S: 5, W: 4, E: 2 },
       },
       {
-        id: "mute_but_read",
-        label: "继续静音，但一条不落全看完",
+        id: "silent_scout",
+        label: "继续潜水，但默默把所有战犯名单记下",
         scoreEffects: { I: 6, C: 3, L: 2 },
       },
     ],
   },
   {
-    id: "weekend_plan",
-    text: "周末临时有人约你出去，你会？",
+    id: "friend_late",
+    text: "朋友迟到 40 分钟，你最像哪种赛后反应？",
     options: [
       {
-        id: "go_now",
-        label: "走，人生就是要临时发疯",
-        scoreEffects: { H: 5, E: 5, W: 4 },
+        id: "stoppage_rage",
+        label: "直接补时心梗：这都能迟到？裁判你看看表！",
+        scoreEffects: { H: 6, E: 4 },
       },
       {
-        id: "check_energy",
-        label: "先看体力、时间、地点和明天有没有事",
-        scoreEffects: { C: 6, T: 4 },
-      },
-      {
-        id: "who_is_going",
-        label: "看谁去，有喜欢的人/有趣的人就去",
-        scoreEffects: { S: 5, W: 3 },
-      },
-      {
-        id: "prefer_home",
-        label: "嘴上说考虑一下，其实已经想好在家躺平",
-        scoreEffects: { I: 6, C: 3 },
-      },
-    ],
-  },
-  {
-    id: "argument_style",
-    text: "和朋友意见不合时，你更像？",
-    options: [
-      {
-        id: "instant_output",
-        label: "立刻开麦，三句话内把观点打出去",
-        scoreEffects: { H: 5, E: 6 },
-      },
-      {
-        id: "logic_table",
-        label: "开始列逻辑、证据、前提和反例",
-        scoreEffects: { C: 5, T: 6 },
-      },
-      {
-        id: "feel_story",
-        label: "更在意这件事背后的态度和故事",
-        scoreEffects: { S: 5, H: 2, L: 2 },
-      },
-      {
-        id: "silent_replay",
-        label: "当场没说什么，回家后在脑内复盘 3 小时",
-        scoreEffects: { I: 6, T: 3, C: 2 },
-      },
-    ],
-  },
-  {
-    id: "hot_take",
-    text: "刷到一个很离谱的热搜，你会？",
-    options: [
-      {
-        id: "comment_now",
-        label: "忍不了，马上输出一句",
-        scoreEffects: { H: 6, E: 5 },
-      },
-      {
-        id: "wait_more",
-        label: "先别急，等反转和完整信息",
-        scoreEffects: { C: 6, T: 4 },
-      },
-      {
-        id: "enjoy_drama",
-        label: "不站队，先看大型连续剧怎么演",
-        scoreEffects: { W: 6, S: 3 },
-      },
-      {
-        id: "send_private",
-        label: "不公开发，只私聊给懂的人吐槽",
-        scoreEffects: { I: 5, L: 2, H: 2 },
-      },
-    ],
-  },
-  {
-    id: "buying_choice",
-    text: "买东西时你最容易被什么打动？",
-    options: [
-      {
-        id: "main_character_aura",
-        label: "质感、故事、氛围感，感觉它属于我",
-        scoreEffects: { S: 6, H: 2 },
-      },
-      {
-        id: "best_value",
-        label: "参数、评价、价格，综合最优才下单",
-        scoreEffects: { T: 6, C: 4 },
-      },
-      {
-        id: "everyone_likes",
-        label: "最近很火，朋友也说好，那我试试",
-        scoreEffects: { W: 5, E: 3 },
-      },
-      {
-        id: "old_favorite",
-        label: "用惯了就继续买，别来打扰我的舒适区",
-        scoreEffects: { L: 6, I: 2, C: 2 },
-      },
-    ],
-  },
-  {
-    id: "posting_moment",
-    text: "你最可能在什么情况下发朋友圈？",
-    options: [
-      {
-        id: "emotion_peak",
-        label: "情绪到位了，不发会憋死",
-        scoreEffects: { H: 5, E: 6 },
-      },
-      {
-        id: "perfect_scene",
-        label: "画面、文案、BGM 都有内味了",
-        scoreEffects: { S: 6, E: 3 },
-      },
-      {
-        id: "after_thinking",
-        label: "想清楚了，发一句很准的",
-        scoreEffects: { I: 4, C: 4, T: 3 },
-      },
-      {
-        id: "almost_never",
-        label: "很少发，但每次发都像阶段性总结",
-        scoreEffects: { I: 6, L: 3, C: 2 },
-      },
-    ],
-  },
-  {
-    id: "favorite_plot",
-    text: "你最吃哪种人生剧情？",
-    options: [
-      {
-        id: "long_love",
-        label: "多年坚持终于等到一个结果",
-        scoreEffects: { L: 7, S: 4 },
-      },
-      {
-        id: "sudden_comeback",
-        label: "低谷逆袭，爽文一样翻盘",
-        scoreEffects: { W: 7, H: 4 },
-      },
-      {
-        id: "chosen_one",
-        label: "天选主角登场，所有伏笔都对上了",
-        scoreEffects: { S: 6, W: 3 },
-      },
-      {
-        id: "clean_execution",
-        label: "计划清晰、执行稳定、结果漂亮",
-        scoreEffects: { T: 6, C: 4 },
-      },
-    ],
-  },
-  {
-    id: "stress_response",
-    text: "压力突然砸下来时，你更像？",
-    options: [
-      {
-        id: "fight_mode",
-        label: "先顶上去，边崩边干",
-        scoreEffects: { H: 6, L: 3 },
-      },
-      {
-        id: "split_tasks",
-        label: "拆任务、排优先级、做计划",
+        id: "check_xg",
+        label: "先问交通、路线和出门时间，分析迟到 xG",
         scoreEffects: { C: 6, T: 5 },
       },
       {
-        id: "talk_it_out",
-        label: "必须找人说说，不然脑子会炸",
-        scoreEffects: { E: 6, H: 3 },
+        id: "dramatic_wait",
+        label: "把等待脑补成绝杀前摇：主角总是最后登场",
+        scoreEffects: { S: 5, I: 2, H: 2 },
       },
       {
-        id: "quiet_shutdown",
-        label: "先消失一会儿，自己缓过来",
-        scoreEffects: { I: 6, C: 3 },
-      },
-    ],
-  },
-  {
-    id: "follow_someone",
-    text: "你会因为什么对一个人上头？",
-    options: [
-      {
-        id: "star_quality",
-        label: "有主角感，出现就自带镜头",
-        scoreEffects: { S: 7, H: 2 },
-      },
-      {
-        id: "reliable_system",
-        label: "靠谱、稳定、做事有章法",
-        scoreEffects: { T: 6, C: 4, L: 2 },
-      },
-      {
-        id: "fun_energy",
-        label: "有趣，会整活，和 TA 在一起不无聊",
-        scoreEffects: { E: 4, W: 5 },
-      },
-      {
-        id: "long_time_trust",
-        label: "认识很久，越看越觉得踏实",
-        scoreEffects: { L: 6, I: 2 },
+        id: "switch_plan",
+        label: "算了，我先转会去奶茶店，快乐不能等",
+        scoreEffects: { W: 6, C: 2 },
       },
     ],
   },
   {
-    id: "decision_logic",
-    text: "做选择时，你最常用哪套逻辑？",
+    id: "plan_changed",
+    text: "原定计划突然被改，你会怎么处理这次“临场换人”？",
     options: [
       {
-        id: "feel_right",
-        label: "我感觉对了，那就对了",
-        scoreEffects: { H: 4, S: 5 },
+        id: "coach_yelling",
+        label: "当场开麦：这个换人我看不懂，主帅下课",
+        scoreEffects: { H: 6, E: 5, T: 2 },
       },
       {
-        id: "compare_options",
-        label: "列优缺点，比较风险和收益",
+        id: "new_shape",
+        label: "迅速重排路线、预算和时间，改踢三中卫",
+        scoreEffects: { C: 5, T: 6 },
+      },
+      {
+        id: "new_storyline",
+        label: "觉得剧情突然有意思了，伟大的转会来了",
+        scoreEffects: { S: 4, W: 5 },
+      },
+      {
+        id: "old_plan_loyal",
+        label: "嘴上配合，心里还在怀念原计划的黄金时代",
+        scoreEffects: { I: 4, L: 5, S: 2 },
+      },
+    ],
+  },
+  {
+    id: "someone_questions_you",
+    text: "别人问你“你懂这个吗？”，你会触发哪种球盲过滤器？",
+    options: [
+      {
+        id: "three_min_press",
+        label: "立刻高位逼抢，三分钟输出到对方想换边",
+        scoreEffects: { H: 4, E: 6, T: 3 },
+      },
+      {
+        id: "show_receipts",
+        label: "不急，先摆数据、案例、时间线和裁判报告",
         scoreEffects: { C: 6, T: 6 },
       },
       {
-        id: "try_new",
-        label: "没试过的更香，人生需要新鲜感",
-        scoreEffects: { W: 6, H: 3 },
+        id: "vibes_expert",
+        label: "我不一定懂战术，但我懂谁有主角相",
+        scoreEffects: { S: 6, W: 2 },
       },
       {
-        id: "stay_with_it",
-        label: "我知道旧选择的坑，但我懒得换",
-        scoreEffects: { L: 6, I: 2 },
-      },
-    ],
-  },
-  {
-    id: "watching_with_people",
-    text: "一群人一起看综艺/比赛/直播时，你是？",
-    options: [
-      {
-        id: "live_barrage",
-        label: "人形弹幕，看到哪吐槽到哪",
-        scoreEffects: { E: 7, H: 4 },
-      },
-      {
-        id: "plot_detective",
-        label: "剧情侦探，提前分析谁会翻车",
-        scoreEffects: { T: 5, C: 4, E: 2 },
-      },
-      {
-        id: "screenshot_collector",
-        label: "截图收藏家，专抓名场面",
-        scoreEffects: { S: 5, W: 4 },
-      },
-      {
-        id: "silent_feeler",
-        label: "表面安静，内心弹幕比谁都密",
-        scoreEffects: { I: 7, S: 2 },
+        id: "quietly_knows",
+        label: "不说话，心里已经把 TA 开除懂球籍",
+        scoreEffects: { I: 6, C: 3, L: 2 },
       },
     ],
   },
   {
-    id: "old_favorite_changes",
-    text: "你喜欢很久的东西变味了，你会？",
+    id: "posting_after_event",
+    text: "一件事刚结束，你的朋友圈像哪种赛后内容？",
     options: [
       {
-        id: "keep_defending",
-        label: "还会替它说两句，毕竟陪我很久",
-        scoreEffects: { L: 7, S: 2 },
+        id: "instant_reaction",
+        label: "哨响立刻发：我宣布这就是年度名场面",
+        scoreEffects: { H: 5, E: 6, W: 2 },
       },
       {
-        id: "write_reason",
-        label: "冷静分析它到底哪里变了",
-        scoreEffects: { T: 6, C: 4 },
+        id: "long_analysis",
+        label: "等十分钟，写一篇赛后复盘小作文",
+        scoreEffects: { C: 4, T: 5, I: 2 },
       },
       {
-        id: "move_on_fast",
-        label: "体面告别，立刻找新快乐",
-        scoreEffects: { W: 7, C: 2 },
+        id: "slow_motion",
+        label: "配图、BGM、滤镜都要像慢镜头回放",
+        scoreEffects: { S: 6, E: 2 },
       },
       {
-        id: "quiet_sad",
-        label: "不骂不闹，但会偷偷难过",
+        id: "archive_only",
+        label: "不发，默默收藏，等多年后当青春素材",
         scoreEffects: { I: 6, L: 4 },
       },
     ],
   },
   {
-    id: "party_role",
-    text: "朋友聚会里，你通常是什么功能？",
+    id: "shopping_window",
+    text: "买东西时，你更像哪类转会窗操作？",
     options: [
       {
-        id: "energy_engine",
-        label: "气氛发动机，冷场我会难受",
-        scoreEffects: { E: 7, H: 3 },
+        id: "highlight_scout",
+        label: "看集锦上头：它太有主角气质了，拿下",
+        scoreEffects: { S: 6, H: 3 },
       },
       {
-        id: "order_keeper",
-        label: "隐形组织者，时间地点流程都要稳",
-        scoreEffects: { T: 5, C: 4, L: 2 },
+        id: "data_department",
+        label: "参数、口碑、价格全拉表，拒绝溢价引援",
+        scoreEffects: { C: 5, T: 6 },
       },
       {
-        id: "story_watcher",
-        label: "观察人类，回家能讲三段小剧场",
-        scoreEffects: { S: 5, I: 3 },
+        id: "deadline_deal",
+        label: "临门一脚冲动下单，转会截止日的神",
+        scoreEffects: { H: 4, W: 6 },
       },
       {
-        id: "where_fun_goes",
-        label: "哪里热闹去哪，快乐优先",
-        scoreEffects: { W: 6, E: 4 },
+        id: "renew_contract",
+        label: "老牌子续约，虽然有短板但有感情基础",
+        scoreEffects: { L: 6, C: 2, I: 2 },
       },
     ],
   },
   {
-    id: "late_night_brain",
-    text: "深夜睡不着时，你脑子里最容易出现？",
+    id: "favorite_life_script",
+    text: "你最吃哪种人生剧本？",
     options: [
       {
-        id: "emotional_replay",
-        label: "今天那句话我是不是说重了",
+        id: "last_dance_life",
+        label: "最后一舞：老朋友、旧梦想、终于等到你",
+        scoreEffects: { S: 5, L: 6, H: 2 },
+      },
+      {
+        id: "dark_horse_life",
+        label: "黑马逆袭：谁都不看好，偏偏一路爆冷",
+        scoreEffects: { W: 7, H: 4 },
+      },
+      {
+        id: "chosen_one_life",
+        label: "天选主角：一登场就像自带金球奖滤镜",
+        scoreEffects: { S: 7, W: 2 },
+      },
+      {
+        id: "system_win_life",
+        label: "体系碾压：计划清楚、执行稳定、赢得体面",
+        scoreEffects: { T: 7, C: 4 },
+      },
+    ],
+  },
+  {
+    id: "pressure_high_press",
+    text: "压力突然高位逼抢，你会怎么出球？",
+    options: [
+      {
+        id: "carry_through",
+        label: "硬带过去，边破防边推进",
+        scoreEffects: { H: 6, L: 3 },
+      },
+      {
+        id: "calm_build_up",
+        label: "先控一下，拆任务，别被节奏带乱",
+        scoreEffects: { C: 6, T: 5 },
+      },
+      {
+        id: "call_teammate",
+        label: "立刻找队友连线，不说出来会炸",
+        scoreEffects: { E: 6, H: 3 },
+      },
+      {
+        id: "park_bus",
+        label: "先摆大巴，消失一会儿，活下来再说",
+        scoreEffects: { I: 6, C: 3 },
+      },
+    ],
+  },
+  {
+    id: "protect_favorite",
+    text: "你喜欢的东西被群嘲，你会？",
+    options: [
+      {
+        id: "defend_badge",
+        label: "直接护队徽：可以输，不能被这么说",
+        scoreEffects: { H: 6, E: 4, L: 4 },
+      },
+      {
+        id: "explain_context",
+        label: "解释背景：你们只看比分，不看过程",
+        scoreEffects: { T: 5, C: 4, L: 2 },
+      },
+      {
+        id: "main_character_defense",
+        label: "替主角说话：你们不懂 TA 的宿命感",
+        scoreEffects: { S: 6, H: 2, L: 2 },
+      },
+      {
+        id: "find_new_fun",
+        label: "算了，先去隔壁看新乐子，别影响心情",
+        scoreEffects: { W: 7, C: 2 },
+      },
+    ],
+  },
+  {
+    id: "watching_live",
+    text: "一起看直播/综艺/比赛时，你是哪种解说席？",
+    options: [
+      {
+        id: "human_barrage",
+        label: "人形弹幕，5 秒一句：这都不吹？",
+        scoreEffects: { E: 7, H: 4 },
+      },
+      {
+        id: "tactical_camera",
+        label: "战术镜头，专看谁站位不对、谁在摸鱼",
+        scoreEffects: { T: 6, C: 4 },
+      },
+      {
+        id: "star_camera",
+        label: "主角镜头，谁有高光谁就是今天封面",
+        scoreEffects: { S: 6, W: 3 },
+      },
+      {
+        id: "inner_commentary",
+        label: "表面安静，内心已经刷满弹幕",
+        scoreEffects: { I: 7, S: 2 },
+      },
+    ],
+  },
+  {
+    id: "old_favorite_decline",
+    text: "你喜欢很久的东西开始走下坡路，你像哪类球迷？",
+    options: [
+      {
+        id: "season_ticket",
+        label: "继续买季票：烂归烂，这是我的主队",
+        scoreEffects: { L: 7, H: 2 },
+      },
+      {
+        id: "post_match_board",
+        label: "冷静开会：问题在管理层、阵容和执行",
+        scoreEffects: { T: 6, C: 4 },
+      },
+      {
+        id: "transfer_out",
+        label: "体面告别，火速转会去快乐更稳定的地方",
+        scoreEffects: { W: 7, C: 2 },
+      },
+      {
+        id: "quiet_grief",
+        label: "不骂了，只是像老队长退场一样难过",
+        scoreEffects: { I: 6, L: 5, S: 2 },
+      },
+    ],
+  },
+  {
+    id: "party_role",
+    text: "朋友聚会里，你最像哪种球队角色？",
+    options: [
+      {
+        id: "captain_hype",
+        label: "更衣室队长，负责把气氛喊起来",
+        scoreEffects: { E: 7, H: 3, L: 2 },
+      },
+      {
+        id: "midfield_organizer",
+        label: "中场调度，时间地点流程都得顺",
+        scoreEffects: { T: 6, C: 4 },
+      },
+      {
+        id: "highlight_editor",
+        label: "赛后剪辑师，专门记住好笑名场面",
+        scoreEffects: { S: 4, W: 5 },
+      },
+      {
+        id: "bench_observer",
+        label: "替补席观察员，不多说但全都看见了",
+        scoreEffects: { I: 6, C: 3 },
+      },
+    ],
+  },
+  {
+    id: "late_night_var",
+    text: "深夜睡不着时，你脑内 VAR 在回放什么？",
+    options: [
+      {
+        id: "emotional_offside",
+        label: "我今天那句话是不是越位了？",
         scoreEffects: { I: 5, S: 3, L: 2 },
       },
       {
-        id: "life_strategy",
-        label: "未来三个月人生路线图",
-        scoreEffects: { T: 5, C: 4 },
+        id: "life_tactics_board",
+        label: "未来三个月战术板：怎么出球、怎么推进",
+        scoreEffects: { T: 6, C: 4 },
       },
       {
-        id: "random_excited",
-        label: "突然想开一个新坑，明天就开始",
+        id: "new_project_fc",
+        label: "突然想开新坑，明天组建新俱乐部",
         scoreEffects: { H: 5, W: 5 },
       },
       {
-        id: "send_message",
-        label: "想找人说话，但又怕打扰",
-        scoreEffects: { I: 4, E: 3, H: 2 },
+        id: "message_not_sent",
+        label: "想发消息，但怕被判干扰门将",
+        scoreEffects: { I: 5, H: 2, S: 2 },
       },
     ],
   },
   {
     id: "friend_asks_advice",
-    text: "朋友找你咨询感情/工作/人生，你会？",
+    text: "朋友找你咨询感情/工作/人生，你会怎么当无证主帅？",
     options: [
       {
-        id: "protect_friend",
-        label: "先站朋友，谁让 TA 难受我先记一笔",
+        id: "protective_manager",
+        label: "先护短：谁让你难受，我先给 TA 红牌",
         scoreEffects: { H: 5, L: 5, E: 2 },
       },
       {
-        id: "structure_issue",
-        label: "先把问题拆清楚，再谈怎么办",
-        scoreEffects: { T: 6, C: 5 },
+        id: "tactics_session",
+        label: "画战术板：问题、资源、风险、下一步",
+        scoreEffects: { T: 7, C: 5 },
       },
       {
-        id: "dramatic_reading",
-        label: "先判断这段关系有没有狗血剧情潜力",
+        id: "drama_scout",
+        label: "先判断这段关系有没有年度狗血名场面",
         scoreEffects: { S: 5, W: 4 },
       },
       {
-        id: "listen_quietly",
-        label: "认真听完，最后给一句很准的",
+        id: "quiet_assistant",
+        label: "认真听完，最后像助教一样给一句准的",
         scoreEffects: { I: 5, C: 3, L: 2 },
       },
     ],
   },
   {
-    id: "being_questioned",
-    text: "别人说“你是不是想太多了”，你会？",
+    id: "work_before_off",
+    text: "快下班/睡觉前突然来新任务，你是什么补时状态？",
     options: [
       {
-        id: "defend_loudly",
-        label: "我这是敏锐，不是想太多",
+        id: "added_time_meltdown",
+        label: "补时 8 分钟？我宣布裁判今天有问题",
+        scoreEffects: { H: 6, E: 5 },
+      },
+      {
+        id: "manage_clock",
+        label: "先看能不能控节奏，哪些今天必须做",
+        scoreEffects: { C: 6, T: 5 },
+      },
+      {
+        id: "hero_moment",
+        label: "突然燃起来：这不就是我的绝杀剧本吗",
+        scoreEffects: { S: 5, H: 4 },
+      },
+      {
+        id: "save_energy",
+        label: "能拖进明天就拖，保级队也要保存体力",
+        scoreEffects: { I: 4, W: 4, C: 2 },
+      },
+    ],
+  },
+  {
+    id: "being_roasted",
+    text: "别人调侃你“你这也太戏多了”，你会？",
+    options: [
+      {
+        id: "press_conference",
+        label: "开新闻发布会：我这是激情，不是戏多",
         scoreEffects: { H: 5, E: 5, S: 2 },
       },
       {
-        id: "show_logic",
-        label: "把推理链路完整展示给 TA 看",
-        scoreEffects: { T: 6, C: 4, E: 2 },
+        id: "analysis_defense",
+        label: "展示回放：我每一步推理都有依据",
+        scoreEffects: { T: 6, C: 4 },
       },
       {
-        id: "own_the_drama",
-        label: "对，我就是会脑补，但我脑补得很精彩",
-        scoreEffects: { S: 5, W: 4 },
+        id: "own_storyline",
+        label: "承认，但我的人生剧情确实比 0:0 好看",
+        scoreEffects: { S: 6, W: 4 },
       },
       {
-        id: "quietly_correct",
-        label: "不解释，反正最后你们会发现我说得对",
-        scoreEffects: { I: 6, C: 3, L: 2 },
+        id: "silent_grudge",
+        label: "不解释，默默记入赛后评分",
+        scoreEffects: { I: 6, L: 3, C: 2 },
       },
     ],
   },
