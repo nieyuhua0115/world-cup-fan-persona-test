@@ -4,27 +4,27 @@ export const fanQuestions: FanQuestion[] = [
   {
     id: "late_arrival",
     text: "聚会迟到了，你会怎么进场？",
-    subtitle: "迟到不可怕，可怕的是你把进门也当成转会官宣。",
+    subtitle: "迟到不可怕，可怕的是你还想踢出赛后名场面。",
     options: [
       {
-        id: "special_one_entry",
-        label: "Special One：我不是迟到，我是压轴登场",
-        scoreEffects: { H: 5, S: 5, E: 4, W: 2 },
+        id: "leao_smile",
+        label: "“球未到，人先笑”，先笑着挥手，气氛到位就算进球",
+        scoreEffects: { H: 3, S: 5, E: 4, W: 2 },
       },
       {
-        id: "lord_bendtner_entry",
-        label: "Lord Bendtner：状态可以一般，自信必须顶级",
+        id: "lingard_show",
+        label: "“你的林皇，无限猖狂”，一进门直接开始整活",
         scoreEffects: { H: 5, S: 4, E: 6, W: 4 },
       },
       {
-        id: "wenger_zip_entry",
-        label: "温格拉链：大方向没问题，卡在门禁这种小细节",
-        scoreEffects: { C: 4, T: 5, I: 3, L: 2 },
+        id: "press_conference",
+        label: "发布会逆转：解释得像自己根本没迟到",
+        scoreEffects: { C: 3, T: 5, E: 4 },
       },
       {
-        id: "goodwin_late_save",
-        label: "雷速球王古德温：不到 90 分钟不救场",
-        scoreEffects: { H: 4, S: 4, W: 6, E: 2 },
+        id: "refund_bro",
+        label: "退钱哥：怪导航、怪天气、怪本泽马",
+        scoreEffects: { H: 6, E: 4, L: 2 },
       },
     ],
   },
@@ -39,7 +39,7 @@ export const fanQuestions: FanQuestion[] = [
       },
       {
         id: "football_heritage",
-        label: "Football heritage：这不是我的锅，这是历史包袱",
+        label: "足球遗产论：这不是我的锅，这是历史包袱",
         scoreEffects: { C: 4, T: 6, E: 4 },
       },
       {
@@ -49,7 +49,7 @@ export const fanQuestions: FanQuestion[] = [
       },
       {
         id: "aguero_moment",
-        label: "Agüerooooo：不到最后一秒不承认翻车",
+        label: "阿圭罗式压哨：不到最后一秒不承认翻车",
         scoreEffects: { H: 5, S: 5, W: 5, E: 2 },
       },
     ],
@@ -127,7 +127,7 @@ export const fanQuestions: FanQuestion[] = [
       },
       {
         id: "tempo_control",
-        label: "发布会逆转：TA 不回不是冷淡，是节奏控制",
+        label: "发布会逆转：对方不回不是冷淡，是节奏控制",
         scoreEffects: { C: 5, T: 5, E: 2 },
       },
     ],
@@ -169,7 +169,7 @@ export const fanQuestions: FanQuestion[] = [
       },
       {
         id: "chelsea_life",
-        label: "车迷的命也是命：别问，问就是 PTSD",
+        label: "车迷的命也是命：别问，问就是大赛创伤",
         scoreEffects: { H: 3, I: 5, L: 5 },
       },
       {
@@ -264,7 +264,7 @@ export const fanQuestions: FanQuestion[] = [
   },
   {
     id: "deadline",
-    text: "deadline 前，你是什么状态？",
+    text: "截止前，你是什么状态？",
     options: [
       {
         id: "time_not_much",
@@ -299,7 +299,7 @@ export const fanQuestions: FanQuestion[] = [
       },
       {
         id: "k77_control",
-        label: "7.7 控分：永远稳定在一个微妙评价",
+        label: "七点七控分：永远稳定在一个微妙评价",
         scoreEffects: { C: 5, T: 4, I: 2 },
       },
       {
@@ -351,7 +351,7 @@ export const fanQuestions: FanQuestion[] = [
       },
       {
         id: "remontada_believer",
-        label: "La Remontada：四球落后也觉得还有剧本",
+        label: "诺坎普奇迹：四球落后也觉得还有剧本",
         scoreEffects: { H: 5, S: 5, W: 5 },
       },
       {
@@ -361,7 +361,7 @@ export const fanQuestions: FanQuestion[] = [
       },
       {
         id: "if_i_speak",
-        label: "If I speak：我看懂问题了，但我说了要出事",
+        label: "穆帅闭麦：我看懂问题了，但我说了要出事",
         scoreEffects: { C: 5, T: 6, I: 4 },
       },
     ],
