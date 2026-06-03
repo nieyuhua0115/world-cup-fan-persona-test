@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { AxisBreakdown } from "../../components/fan-test/AxisBreakdown";
+import { CreditFooter } from "../../components/fan-test/CreditFooter";
 import { FanPersonaCard } from "../../components/fan-test/FanPersonaCard";
 import { NationalTeamBiasCard } from "../../components/fan-test/NationalTeamBiasCard";
 import type { FanTestResult } from "../../data/fan-test/types";
@@ -112,6 +113,7 @@ export default function FanResultPage() {
             <ActionPanel />
           </div>
         </div>
+        <CreditFooter />
       </div>
     </main>
   );

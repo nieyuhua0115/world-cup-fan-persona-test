@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CreditFooter } from "../components/fan-test/CreditFooter";
 import { HomeHeroIllustration } from "../components/fan-test/HomeHeroIllustration";
 
 export default function HomePage() {
@@ -57,6 +58,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+        <CreditFooter />
       </div>
     </main>
   );

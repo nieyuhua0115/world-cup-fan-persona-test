@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { CreditFooter } from "../../components/fan-test/CreditFooter";
 import { FanProgressBar } from "../../components/fan-test/FanProgressBar";
 import { FanQuestionCard } from "../../components/fan-test/FanQuestionCard";
 import { fanQuestions } from "../../data/fan-test/questions";
@@ -137,6 +138,7 @@ export default function FanTestPage() {
             />
           </section>
         ) : null}
+        <CreditFooter />
       </div>
     </main>
   );
