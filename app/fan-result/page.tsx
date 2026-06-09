@@ -6,7 +6,9 @@ import { AxisBreakdown } from "../../components/fan-test/AxisBreakdown";
 import { CreditFooter } from "../../components/fan-test/CreditFooter";
 import { FanPersonaCard } from "../../components/fan-test/FanPersonaCard";
 import { NationalTeamBiasCard } from "../../components/fan-test/NationalTeamBiasCard";
+import type { GeneratedFanRoast } from "../../data/fan-test/generatedRoasts";
 import type { FanTestResult } from "../../data/fan-test/types";
+import { getGeneratedFanRoast } from "../../lib/fan-test/generatedRoasts";
 import { calculateFanPersona } from "../../lib/fan-test/scoring";
 import {
   fanTestStorageKey,
@@ -40,13 +42,18 @@ export default function FanResultPage() {
 
     return calculateFanPersona(payload);
   }, [payload]);
+  const generatedRoast = result
+    ? getGeneratedFanRoast(result.code, result.selectedNationalTeam.id)
+    : undefined;
 
   async function copyFriendCircleCopy() {
     if (!result) {
       return;
     }
 
-    const text = `${result.persona.friendCircleCopy}\n${result.shareLine}`;
+    const text = generatedRoast
+      ? `${generatedRoast.shareCopy}\n${generatedRoast.roast}`
+      : `${result.persona.friendCircleCopy}\n${result.shareLine}`;
 
     if (!navigator.clipboard) {
       setCopyState("unsupported");
@@ -102,6 +109,7 @@ export default function FanResultPage() {
             <CopyPanel
               copyState={copyState}
               friendCircleCopy={result.persona.friendCircleCopy}
+              generatedRoast={generatedRoast}
               shareLine={result.shareLine}
               onCopy={copyFriendCircleCopy}
             />
@@ -122,11 +130,13 @@ export default function FanResultPage() {
 function CopyPanel({
   copyState,
   friendCircleCopy,
+  generatedRoast,
   shareLine,
   onCopy,
 }: {
   copyState: CopyState;
   friendCircleCopy: string;
+  generatedRoast?: GeneratedFanRoast;
   shareLine: string;
   onCopy: () => void;
 }) {
@@ -146,12 +156,52 @@ function CopyPanel({
         {shareLine}
       </p>
 
+      {generatedRoast ? (
+        <div className="mt-6 rounded-md border border-rose-100 bg-rose-50 p-4">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-rose-600">
+            AI 预生成毒舌版
+          </h2>
+          <h3 className="mt-3 text-xl font-black text-slate-950">
+            {generatedRoast.headline}
+          </h3>
+          <p className="mt-3 text-sm leading-7 text-slate-800">
+            {generatedRoast.roast}
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-2">
+            <div className="rounded-md bg-white p-3">
+              <p className="text-xs font-bold uppercase tracking-[0.14em] text-rose-500">
+                分享文案
+              </p>
+              <p className="mt-2 text-sm leading-6 text-slate-700">
+                {generatedRoast.shareCopy}
+              </p>
+            </div>
+            <div className="rounded-md bg-white p-3">
+              <p className="text-xs font-bold uppercase tracking-[0.14em] text-rose-500">
+                小红书配文
+              </p>
+              <p className="mt-2 text-sm leading-6 text-slate-700">
+                {generatedRoast.xiaohongshuCaption}
+              </p>
+            </div>
+          </div>
+          <div className="mt-3 rounded-md bg-white p-3">
+            <p className="text-xs font-bold uppercase tracking-[0.14em] text-rose-500">
+              短视频口播
+            </p>
+            <p className="mt-2 text-sm leading-6 text-slate-700">
+              {generatedRoast.shortVideoScript}
+            </p>
+          </div>
+        </div>
+      ) : null}
+
       <button
         className="mt-5 rounded-md bg-slate-950 px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-800"
         type="button"
         onClick={onCopy}
       >
-        复制朋友圈文案
+        {generatedRoast ? "复制 AI 文案" : "复制朋友圈文案"}
       </button>
       {copyState === "copied" ? (
         <p className="mt-3 text-sm text-emerald-600">已复制。</p>

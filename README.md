@@ -29,6 +29,14 @@ npm run typecheck
 npm run build
 ```
 
+## Local Generated Copy Cache
+
+The app does not call an LLM at runtime. It locally builds enhanced copy for all
+`persona + national team` combinations from the static persona and team data.
+The result page reads that cache by `persona code + team id`.
+
+There are 288 combinations: 16 personas x 18 national team filters.
+
 ## Routes
 
 - `/` landing page
