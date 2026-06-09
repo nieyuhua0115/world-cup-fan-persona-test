@@ -82,16 +82,6 @@ export const nationalTeams: NationalTeamBias[] = [
     warningLabel: "容易把输球解读成艺术牺牲",
   },
   {
-    id: "italy",
-    name: "意大利",
-    label: "意大利",
-    roastTitle: "防守美学遗老",
-    roastDescription:
-      "你相信足球不只有进攻，还有铲断、站位、门将和 1:0 的优雅。你的快乐有时候来自对手越踢越急。",
-    keywords: ["防守", "门将", "链式防守", "1:0"],
-    warningLabel: "容易把苟住说成艺术",
-  },
-  {
     id: "japan",
     name: "日本",
     label: "日本",

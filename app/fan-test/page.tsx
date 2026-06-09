@@ -13,29 +13,30 @@ import {
   type FanTestStoredPayload,
 } from "../../lib/fan-test/storage";
 
-type FanTestStep = "intro" | "team" | "quiz";
+type FanTestStep = "team" | "quiz";
 
 export default function FanTestPage() {
   const router = useRouter();
-  const [step, setStep] = useState<FanTestStep>("intro");
+  const [step, setStep] = useState<FanTestStep>("team");
   const [selectedNationalTeamId, setSelectedNationalTeamId] = useState("");
   const [questionIndex, setQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
 
   const currentQuestion = fanQuestions[questionIndex];
   const selectedOptionId = answers[currentQuestion?.id];
-  const canContinue =
-    step === "team" ? Boolean(selectedNationalTeamId) : Boolean(selectedOptionId);
-
-  function startQuiz() {
-    setStep("team");
-  }
+  const canContinue = Boolean(selectedOptionId);
 
   function restart() {
-    setStep("intro");
+    setStep("team");
     setSelectedNationalTeamId("");
     setQuestionIndex(0);
     setAnswers({});
+  }
+
+  function selectNationalTeam(teamId: string) {
+    setSelectedNationalTeamId(teamId);
+    setQuestionIndex(0);
+    setStep("quiz");
   }
 
   function selectOption(optionId: string) {
@@ -51,7 +52,6 @@ export default function FanTestPage() {
 
   function goPrevious() {
     if (step === "team") {
-      setStep("intro");
       return;
     }
 
@@ -64,12 +64,6 @@ export default function FanTestPage() {
   }
 
   function goNext() {
-    if (step === "team") {
-      setStep("quiz");
-      setQuestionIndex(0);
-      return;
-    }
-
     if (!currentQuestion || !selectedOptionId) {
       return;
     }
@@ -105,14 +99,10 @@ export default function FanTestPage() {
           </div>
         </header>
 
-        {step === "intro" ? <IntroStep onStart={startQuiz} /> : null}
-
         {step === "team" ? (
           <TeamStep
             selectedNationalTeamId={selectedNationalTeamId}
-            onSelect={setSelectedNationalTeamId}
-            onBack={goPrevious}
-            onNext={goNext}
+            onSelect={selectNationalTeam}
           />
         ) : null}
 
@@ -144,53 +134,12 @@ export default function FanTestPage() {
   );
 }
 
-function IntroStep({ onStart }: { onStart: () => void }) {
-  return (
-    <section className="grid flex-1 items-center gap-8 py-12 lg:grid-cols-[1.1fr_0.9fr]">
-      <div>
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">
-          World Cup Meme Persona Test
-        </p>
-        <h2 className="mt-4 max-w-3xl text-5xl font-semibold leading-tight text-slate-950">
-          用足球梗，测你的生活发疯人格。
-        </h2>
-        <div className="mt-6 max-w-2xl space-y-3 text-lg leading-8 text-slate-700">
-          <p>有人群聊开麦像赛后评分区，有人深夜 VAR 自己的人生；</p>
-          <p>有人主队烂了还续约，有人快乐随转会窗实时更新；</p>
-          <p>不需要真懂球，只要你体验过上头、开会、补时心梗。</p>
-        </div>
-        <p className="mt-6 text-xl font-semibold text-rose-600">
-          16 道足球梗生活题，测出你的犯病人格。
-        </p>
-        <button
-          className="mt-8 rounded-md bg-slate-950 px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-800"
-          type="button"
-          onClick={onStart}
-        >
-          开始测试
-        </button>
-      </div>
-
-      <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-xl shadow-slate-200/70">
-        <h3 className="text-lg font-semibold text-slate-950">本测试纯属娱乐。</h3>
-        <p className="mt-4 text-sm leading-7 text-slate-600">
-          如有冒犯，说明测得挺准。结果只调侃日常行为、社交状态、看球姿势和球迷心态，不攻击国家、民族、地域或现实身份。
-        </p>
-      </div>
-    </section>
-  );
-}
-
 function TeamStep({
   selectedNationalTeamId,
   onSelect,
-  onBack,
-  onNext,
 }: {
   selectedNationalTeamId: string;
   onSelect: (teamId: string) => void;
-  onBack: () => void;
-  onNext: () => void;
 }) {
   return (
     <section className="mx-auto flex w-full max-w-4xl flex-1 flex-col py-8">
@@ -202,7 +151,7 @@ function TeamStep({
           你世界杯期间最容易代入哪种身份滤镜？
         </h2>
         <p className="mt-3 text-sm leading-6 text-slate-500">
-          这个答案不参与 16 型人格计算，只生成你的世界杯滤镜诊断。
+          这个答案不参与 16 型人格计算，只生成你的世界杯滤镜诊断。选完会直接进入第一题。
         </p>
 
         <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -230,12 +179,6 @@ function TeamStep({
         </div>
       </div>
 
-      <NavControls
-        canContinue={Boolean(selectedNationalTeamId)}
-        isFinal={false}
-        onBack={onBack}
-        onNext={onNext}
-      />
     </section>
   );
 }
